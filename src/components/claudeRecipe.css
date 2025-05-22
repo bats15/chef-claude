@@ -12,7 +12,6 @@
   line-height: 1.7;
   font-size: 1.125rem;
   width: 80vw;
-  min-width: 500px;
 }
 .suggested-recipe-container ol li, 
 .suggested-recipe-container ul li {
@@ -28,11 +27,7 @@
   }
 }
 
-@media (min-width: 1200px) {
-  .suggested-recipe-container {
-    max-width: 1000px;
-  }
-}
+
 
 /* Debug styles */
 .suggested-recipe-container.debug {

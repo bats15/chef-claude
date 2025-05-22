@@ -4,4 +4,5 @@ main{
     background-color: aliceblue;
     font-family: Arial, sans-serif;
     scrollbar-width:none;
+    overflow-x: hidden;
 }

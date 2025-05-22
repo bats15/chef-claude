@@ -46,7 +46,6 @@
 .get-recipe{
   border: 2px solid black;
   width: 50vw;
-  min-width:430px;
   margin: 0 auto;
   padding: 0.5em;
   display: flex;

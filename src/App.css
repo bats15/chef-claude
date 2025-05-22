@@ -14,9 +14,3 @@ main{
 
     }
 }
-
-@media screen and (min-width: 1200px) {
-    main {
-        max-width: 1200px;
-    }
-}
