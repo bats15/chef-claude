@@ -1,0 +1,20 @@
+.suggested-recipe-container {
+  font-family: system-ui, sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  margin: 1em auto;
+  padding: 16px 20px;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: #222;
+  line-height: 1.7;
+  font-size: 1.125rem;
+  width: 80vw;
+  min-width: 500px;
+}
+.suggested-recipe-container ol li, 
+.suggested-recipe-container ul li {
+    word-wrap: break-word;
+}

@@ -1,0 +1,10 @@
+main{
+    margin: 0;padding: 0 0 5em 0;
+    background-color: aliceblue;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    min-width: 500px;
+}
