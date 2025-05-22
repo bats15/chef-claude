@@ -1,5 +1,5 @@
-.header{
-    background-color:white;
+.header {
+    background-color: white;
     padding: 20px;
     text-align: center;
     margin: 0;
@@ -7,14 +7,53 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    /* Debug: Header flex properties confirmed for desktop view */
 }
 
-.header h1{
+.header h1 {
     font-size: 2.5em;
     margin: 0 1em;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana;
-}
-.header img{
-    width: 70px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana;
+    /* Debug: h1 styles set for desktop view */
 }
 
+.header img {
+    width: 70px;
+    /* Debug: Image size set for desktop view */
+}
+
+/* Media query for tablets and below */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 2em;
+        margin: 0.5em 0;
+    }
+
+    .header img {
+        width: 60px;
+    }
+
+    /* Debug: Adjustments applied for tablet view */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 1.5em;
+    }
+
+    .header img {
+        width: 50px;
+    }
+    
+    /* Debug: Adjustments applied for mobile view */
+}

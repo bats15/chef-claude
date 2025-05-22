@@ -149,3 +149,37 @@
   color: rgb(0, 0, 0);
   border: 2px solid rgb(0, 0, 0);
 }
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
+    padding: 1em;
+  }
+  
+  .form-container > input,
+  .form-container > button {
+    width: 80%;
+    margin: 1em auto;
+    height: auto;
+  }
+  
+  .get-recipe {
+    flex-direction: column;
+    width: 90vw;
+    min-width: unset;
+  }
+  
+  .get-recipe-left,
+  .get-recipe-right {
+    width: 100%;
+  }
+  
+  .get-recipe-right > button {
+    width: 60%;
+    height: auto;
+    font-size: 1rem;
+  }
+  
+  .show-ingredients > ul > li {
+    font-size: 1rem;
+  }
+}
