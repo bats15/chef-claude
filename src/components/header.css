@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     /* Debug: Header flex properties confirmed for desktop view */
 }
 
