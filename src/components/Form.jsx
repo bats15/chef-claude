@@ -9,7 +9,7 @@ const Form = () => {
   const [recipe, setRecipe] = React.useState("");
   const [clicked, setClicked] = React.useState(false);
 
-  const things = ingredient.map(thing => <li key={thing}>{thing} <button className="X-button" id={thing} onClick={() => remove(thing)}>X</button></li>);
+  const things = ingredient.map(thing => <li key={thing} className="ingredient-item">{thing} <button className="X-button" id={thing} onClick={() => remove(thing)}>X</button></li>);
 
   function remove(id) {
     setIngredient(prevIngredients => prevIngredients.filter(item => item !== id));
