@@ -7,8 +7,13 @@ import { getRecipeFromMistral } from '../ai';
 const Form = () => {
   const [ingredient, setIngredient] = React.useState([]);
   const [recipe, setRecipe] = React.useState("");
+  const [clicked, setClicked] = React.useState(false);
 
-  const things = ingredient.map(thing => <li key={thing}>{thing}</li>);
+  const things = ingredient.map(thing => <li key={thing}>{thing} <button className="X-button" id={thing} onClick={() => remove(thing)}>X</button></li>);
+
+  function remove(id) {
+    setIngredient(prevIngredients => prevIngredients.filter(item => item !== id));
+  }
 
   function capitalizeFirstLetter(string) {
     if (string.length === 0) return "";
@@ -24,29 +29,36 @@ const Form = () => {
   }
 
 
-async function getRecipe() {
-        const recipeMarkdown = await getRecipeFromMistral(ingredient)
-        setRecipe(recipeMarkdown)
-}
+  async function getRecipe() {
+    const recipeMarkdown = await getRecipeFromMistral(ingredient)
+    setRecipe(recipeMarkdown)
+  }
+
+  function HandleClickGenerate() {
+    getRecipe();
+    setClicked(true);
+  }
 
   return (
     <>
       <form className="form-container" action={handleSubmit}>
-        <input 
-          type="text" 
-          placeholder="e.g. oregano" 
-          name="ingredient" 
+        <input
+          type="text"
+          placeholder="e.g. oregano"
+          name="ingredient"
           required
         />
         <button type="submit">+ Add Ingredient</button>
       </form>
 
-      <IngredientsList 
-        listLength={ingredient.length} 
-        thing={things} 
-        getRecipe={getRecipe}
-      />
-      {recipe && <SectionA recipe={recipe} />}
+      <IngredientsList
+        listLength={ingredient.length}
+        thing={things}
+        getRecipe={HandleClickGenerate}
+        />
+      {clicked ? (
+  recipe ? <SectionA recipe={recipe} /> : <p>Generating recipe...</p>
+) : null}
     </>
   );
 };
