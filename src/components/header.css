@@ -8,6 +8,12 @@
     align-items: center;
     width: 100%;
     /* Debug: Header flex properties confirmed for desktop view */
+    overflow-x: hidden;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.header::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
 }
 
 .header h1 {

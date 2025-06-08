@@ -3,12 +3,21 @@ main{
     padding: 0;
     background-color: aliceblue;
     font-family: Arial, sans-serif;
-    scrollbar-width:none;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
     overflow-x: hidden;
+}
+
+main::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
 }
 
 .main-index{
     overflow-x: hidden;
-    scrollbar-width: none;
-    
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.main-index::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
 }

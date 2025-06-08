@@ -5,6 +5,12 @@
   align-items: center;
   background-color: rgb(235, 245, 255);
   width: 100%;
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.form-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
 }
 
 .form-container > input {
