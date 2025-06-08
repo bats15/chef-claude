@@ -6,3 +6,9 @@ main{
     scrollbar-width:none;
     overflow-x: hidden;
 }
+
+.main-index{
+    overflow-x: hidden;
+    scrollbar-width: none;
+    
+}

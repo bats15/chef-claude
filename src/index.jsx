@@ -5,7 +5,7 @@ import App from './App.jsx'
 
 
 createRoot(document.getElementById('root')).render(
-  <main>
+  <main className='main-index'>
     <App />
     
   </main>
