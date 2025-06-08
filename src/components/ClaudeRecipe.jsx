@@ -5,7 +5,7 @@ import './claudeRecipe.css';
 export default function SectionA({ recipe }) {
   return (
     <section className="suggested-recipe-container">
-      <ReactMarkdown>
+      <ReactMarkdown className="suggested-recipe-markdown">
         {recipe || "Loading recipe..."}
       </ReactMarkdown>
     </section>

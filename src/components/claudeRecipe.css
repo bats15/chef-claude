@@ -23,6 +23,15 @@
 .suggested-recipe-container ul li {
     word-wrap: break-word;
 }
+.suggested-recipe-markdown{
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+}
+.suggested-recipe-markdown::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
 
 @media (max-width: 768px) {
   .suggested-recipe-container {
